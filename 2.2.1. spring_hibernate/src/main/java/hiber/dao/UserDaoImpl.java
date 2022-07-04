@@ -12,7 +12,7 @@ public class UserDaoImpl implements UserDao {
 
     private SessionFactory sessionFactory;
 
-    final String HQL = "FROM User u LEFT OUTER JOIN FETCH u.car WHERE u.car.model =: modelName and u.car.series =: seriesName";
+    private final String HQL = "FROM User u LEFT OUTER JOIN FETCH u.car WHERE u.car.model =: modelName and u.car.series =: seriesName";
 
     public UserDaoImpl(SessionFactory sessionFactory) {
         this.sessionFactory = sessionFactory;
